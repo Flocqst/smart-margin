@@ -1,24 +1,20 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 pragma solidity 0.8.18;
 
-import "forge-std/Test.sol";
 import {Account} from "../../src/Account.sol";
 import {AccountExposed} from "../utils/AccountExposed.sol";
 import {ConsolidatedEvents} from "../utils/ConsolidatedEvents.sol";
 import {ERC20} from "@solmate/tokens/ERC20.sol";
 import {Events} from "../../src/Events.sol";
 import {Factory} from "../../src/Factory.sol";
-import {
-    IAccount,
-    IFuturesMarketManager,
-    IPerpsV2MarketConsolidated
-} from "../../src/interfaces/IAccount.sol";
+import {IAccount} from "../../src/interfaces/IAccount.sol";
 import {IAddressResolver} from "@synthetix/IAddressResolver.sol";
-import {IPerpsV2MarketSettings} from "@synthetix/IPerpsV2MarketSettings.sol";
+import {IFuturesMarketManager} from "../../src/interfaces/IAccount.sol";
+import {IPerpsV2MarketConsolidated} from "../../src/interfaces/IAccount.sol";
 import {ISynth} from "@synthetix/ISynth.sol";
-import {OpsReady, IOps} from "../../src/utils/OpsReady.sol";
 import {Settings} from "../../src/Settings.sol";
 import {Setup} from "../../script/Deploy.s.sol";
+import {Test} from "forge-std/Test.sol";
 import "../utils/Constants.sol";
 
 // functions tagged with @HELPER are helper functions and not tests
